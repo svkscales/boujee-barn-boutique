@@ -1,0 +1,82 @@
+/* Trust Banner Component */
+.trust-banner-container {
+    padding: 3rem 5%;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+}
+
+.trust-banner {
+    background-color: var(--sand-bg);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    padding: 2.5rem 4rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    gap: 2rem;
+}
+
+.trust-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+.trust-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.trust-text h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.trust-text p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .trust-banner-container {
+        padding: 1rem 5%;
+    }
+    .trust-banner {
+        flex-direction: column;
+        padding: 1.5rem 1rem;
+        gap: 1rem;
+    }
+    .trust-item {
+        flex-direction: row;
+        text-align: left;
+        gap: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    .trust-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+    .trust-icon {
+        width: 24px;
+        height: 24px;
+        margin-bottom: 0;
+    }
+    .trust-text p {
+        display: none; /* Strip description to stay thin like user requested */
+    }
+}
