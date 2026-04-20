@@ -36,7 +36,6 @@ function App() {
       setCurrentRoute(window.location.hash);
       window.scrollTo(0, 0); // Ensure the new page loads at the top
     };
-    };
     window.addEventListener('hashchange', handleHashChange);
     
     const handleScroll = () => {
