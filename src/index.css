@@ -767,6 +767,30 @@ footer {
     align-items: start;
 }
 
+/* Contact Page Layouts */
+.contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 4rem;
+    align-items: center;
+}
+.contact-content-column {
+    padding-right: 2rem;
+}
+.contact-title {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+.contact-location-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+.contact-image-wrapper img {
+    height: 800px;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     .hero-title { font-size: 4rem; }
@@ -928,6 +952,42 @@ footer {
     .line-header h2 {
         font-size: 2rem !important;
         white-space: nowrap; /* Forces one line for Meet the Girls / Inside the Barn */
+    }
+
+    /* Contact Page Mobile Layouts */
+    .contact-layout, .contact-location-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .contact-content-column {
+        padding-right: 0;
+    }
+    .contact-title {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .contact-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        padding-bottom: 0.8rem;
+    }
+    .contact-item h4 {
+        margin-bottom: 0 !important;
+        font-size: 1rem !important;
+    }
+    .contact-item p {
+        white-space: nowrap;
+        font-size: 0.95rem !important;
+        margin-left: 1rem;
+        text-align: right;
+    }
+    .contact-image-wrapper img {
+        height: 300px;
+    }
+    .opening-times-section > div {
+        font-size: 0.95rem !important;
     }
 
     /* Grids & Mobile Structural Overrides */

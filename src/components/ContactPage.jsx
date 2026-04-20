@@ -3,13 +3,13 @@ import React from 'react';
 const ContactPage = () => {
   return (
     <div className="contact-page">
-      <section className="about-hero vibe-section" style={{ backgroundColor: 'var(--white)', position: 'relative', overflow: 'hidden' }}>
+      <section className="contact-hero vibe-section" style={{ backgroundColor: 'var(--white)', position: 'relative', overflow: 'hidden' }}>
         <div className="contact-slash-banner"></div>
-        <div className="container vibe-grid" style={{ position: 'relative', zIndex: 1, display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)', gap: '4rem', alignItems: 'center' }}>
+        <div className="container contact-layout" style={{ position: 'relative', zIndex: 1 }}>
           
           {/* Left Column: Contact Structure */}
-          <div className="vibe-content" style={{ paddingRight: '2rem' }}>
-            <h2 style={{ fontSize: '3.5rem', marginBottom: '2rem' }}>Contact <em>The Boutique</em></h2>
+          <div className="contact-content-column">
+            <h2 className="contact-title">Contact <em>The Boutique</em></h2>
             
             <div className="contact-details" style={{ marginBottom: '3rem' }}>
               <div className="contact-item" style={{ marginBottom: '1.5rem' }}>
@@ -29,7 +29,7 @@ const ContactPage = () => {
             </div>
 
             <div className="location-section" style={{ borderTop: '1px solid var(--sand-bg)', paddingTop: '2rem' }}>
-              <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)', gap: '2rem', alignItems: 'center' }}>
+              <div className="contact-location-layout">
                 <div>
                   <h4 style={{ fontSize: '1.2rem', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Our Location</h4>
                   <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '1.5rem', lineHeight: '1.6' }}>
@@ -86,8 +86,8 @@ const ContactPage = () => {
           </div>
 
           {/* Right Column: Imagery */}
-          <div className="vibe-image">
-            <img src="/contact.jpg" alt="Contact The Boujee Barn" className="img-placeholder tall" style={{ objectFit: 'cover', border: 'none', backgroundColor: 'transparent', height: '800px', width: '100%', borderRadius: '4px' }} />
+          <div className="contact-image-wrapper">
+            <img src="/contact.jpg" alt="Contact The Boujee Barn" className="img-placeholder tall" style={{ objectFit: 'cover', border: 'none', backgroundColor: 'transparent', width: '100%', borderRadius: '4px' }} />
           </div>
 
         </div>
