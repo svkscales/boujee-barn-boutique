@@ -1039,7 +1039,6 @@ footer {
 .mobile-static span {
     transform: translateY(15px);
 }
-}
 
 @media (max-width: 480px) {
     .footer-grid { grid-template-columns: 1fr; }
