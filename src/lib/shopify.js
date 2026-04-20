@@ -86,9 +86,9 @@ export async function fetchProductsByQuery(searchQuery) {
 
 export async function fetchProductsByCollectionHandle(handle, productTypeFilter = null) {
   const query = `
-    query CollectionQuery($handle: String!, $filters: [ProductFilter!]) {
+    query CollectionQuery($handle: String!) {
       collection(handle: $handle) {
-        products(first: 250, filters: $filters) {
+        products(first: 250) {
           edges {
             node {
               ...ProductDetails
@@ -99,8 +99,7 @@ export async function fetchProductsByCollectionHandle(handle, productTypeFilter 
     }
     ${PRODUCT_FRAGMENT}
   `;
-  const filters = productTypeFilter ? [{ productType: productTypeFilter }] : [];
-  const response = await shopifyFetch({ query, variables: { handle, filters } });
+  const response = await shopifyFetch({ query, variables: { handle } });
   return response.body?.data?.collection?.products?.edges?.map(edge => edge.node) || [];
 }
 

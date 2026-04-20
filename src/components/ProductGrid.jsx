@@ -30,7 +30,7 @@ const ProductGrid = ({ type, value, title, productType }) => {
       if (isMounted) {
         const activeProducts = data.filter(p => {
           if (!p || !p.availableForSale) return false;
-          if (productType && (!p.productType || p.productType.toLowerCase() !== productType.toLowerCase())) return false;
+          // Purposely relaxing strict productType matching: Let the Shopify Collection assignment govern visibility!
           return true;
         });
         setProducts(activeProducts);

@@ -220,14 +220,20 @@ const Navbar = () => {
           {cart?.totalQuantity > 0 && (
             <span style={{ 
               position: 'absolute', 
-              top: '-8px', 
-              right: '-10px', 
+              top: '-6px', 
+              right: '-8px', 
               backgroundColor: 'var(--text-primary)', 
               color: 'var(--white)', 
               fontSize: '0.65rem', 
               fontWeight: 'bold', 
-              padding: '2px 6px', 
-              borderRadius: '50%' 
+              height: '18px',
+              minWidth: '18px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              borderRadius: '9px',
+              padding: '0 4px',
+              pointerEvents: 'none'
             }}>
               {cart.totalQuantity}
             </span>

@@ -34,7 +34,6 @@ function App() {
   useEffect(() => {
     const handleHashChange = () => {
       setCurrentRoute(window.location.hash);
-      window.scrollTo(0, 0); // Ensure the new page loads at the top
     };
     window.addEventListener('hashchange', handleHashChange);
     
@@ -49,6 +48,11 @@ function App() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  // Guarantee top-of-page rendering whenever the simulated route changes.
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentRoute]);
 
   const renderContent = () => {
     if (currentRoute === '#about') return <AboutPage />;
