@@ -51,7 +51,9 @@ function App() {
 
   // Guarantee top-of-page rendering whenever the simulated route changes.
   useEffect(() => {
-    window.scrollTo(0, 0);
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 10);
   }, [currentRoute]);
 
   const renderContent = () => {

@@ -6,6 +6,7 @@ async function shopifyFetch({ query, variables }) {
   try {
     const result = await fetch(endpoint, {
       method: 'POST',
+      cache: 'no-store', // Absolutely force live refresh for every Shopify ping
       headers: {
         'Content-Type': 'application/json',
         'X-Shopify-Storefront-Access-Token': storefrontAccessToken
