@@ -28,11 +28,11 @@ const AboutPage = () => {
 
           <div className="grid-4">
             <div className="staff-card">
-              <div className="img-placeholder" style={{ height: '400px', backgroundColor: 'var(--sand-bg)', overflow: 'hidden' }}>
-                <img src="/staff-bobbie.jpg" alt="Bobbie Joe" style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.35)', transformOrigin: 'center 15%' }} />
+              <div className="img-placeholder" style={{ height: '250px', backgroundColor: 'var(--sand-bg)', overflow: 'hidden' }}>
+                <img src="/staff-bobbie.jpg" alt="Bobbi Jo" style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.35)', transformOrigin: 'center 15%' }} />
               </div>
               <div className="staff-info" style={{ marginTop: '1.5rem', textAlign: 'center' }}>
-                <h4 style={{ fontSize: '1.2rem', marginBottom: '0.2rem' }}>Bobbie Joe</h4>
+                <h4 style={{ fontSize: '1.2rem', marginBottom: '0.2rem' }}>Bobbi Jo</h4>
                 <p style={{ color: 'var(--text-secondary)', fontStyle: 'italic', fontSize: '0.9rem' }}>Store Manager</p>
               </div>
             </div>
