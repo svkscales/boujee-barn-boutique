@@ -12,21 +12,14 @@ const Footer = () => {
 
     setStatus('loading');
 
-    // To use Mailchimp, set VITE_MAILCHIMP_API_KEY in your deployment environment variables (.env)
-    const API_KEY = import.meta.env.VITE_MAILCHIMP_API_KEY || 'your_api_key_here';
-    const LIST_ID = '6ea3f2773c';
-    const DATACENTER = API_KEY.split('-')[1];
-
     try {
-      const response = await fetch(`/api/mailchimp/3.0/lists/${LIST_ID}/members`, {
+      const response = await fetch('/api/subscribe', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Basic ${btoa('anystring:' + API_KEY)}`
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          email_address: email,
-          status: 'subscribed'
+          email_address: email
         })
       });
 
