@@ -218,21 +218,16 @@ const Navbar = () => {
             <path d="M9 8v-2a3 3 0 0 1 6 0v2" />
           </svg>
           {cart?.totalQuantity > 0 && (
-            <span style={{ 
+            <span className="cart-badge" style={{ 
               position: 'absolute', 
-              top: '-6px', 
-              right: '-8px', 
+              top: '-8px', 
+              right: '-10px', 
               backgroundColor: 'var(--text-primary)', 
               color: 'var(--white)', 
               fontSize: '0.65rem', 
               fontWeight: 'bold', 
-              height: '18px',
-              minWidth: '18px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              borderRadius: '9px',
-              padding: '0 4px',
+              padding: '2px 6px', 
+              borderRadius: '50%',
               pointerEvents: 'none'
             }}>
               {cart.totalQuantity}

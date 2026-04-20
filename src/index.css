@@ -849,6 +849,17 @@ footer {
         display: flex;
         align-items: center;
     }
+    .cart-badge {
+        top: -6px !important;
+        right: -8px !important;
+        height: 18px !important;
+        min-width: 18px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border-radius: 9px !important;
+        padding: 0 4px !important;
+    }
 
     /* Announcement Bar Fix */
     .announcement-bar {
