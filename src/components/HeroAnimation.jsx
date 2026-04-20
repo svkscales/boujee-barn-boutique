@@ -75,7 +75,9 @@ const HeroAnimation = () => {
       
       img.onload = () => {
         loadedImages++;
-        if (loadedImages === 1) {
+        
+        // Only trigger the initial frame load once the physical FIRST image actually finishes downloading over the live network.
+        if (i === 0) {
           setCanvasSize();
           render(0);
         }
