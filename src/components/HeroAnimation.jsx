@@ -92,7 +92,7 @@ const HeroAnimation = () => {
 
   return (
     <section className="hero-scroll-container" id="hero" ref={containerRef}>
-      <div className="canvas-wrapper">
+      <div className="canvas-wrapper hero-bg-wrapper">
         <canvas id="hero-canvas" ref={canvasRef}></canvas>
         <div className="hero-overlay"></div>
         

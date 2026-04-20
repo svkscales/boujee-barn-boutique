@@ -799,10 +799,12 @@ footer {
 }
 
 @media (max-width: 768px) {
-    /* Navbar Mobile Responsiveness */
+    /* Navbar Mobile Responsiveness - Bulletproof Flexbox Layout */
     .navbar {
-        padding: 1.2rem;
-        justify-content: flex-start;
+        padding: 1rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
     }
     .nav-left, .nav-right .nav-dropdown {
         display: none !important;
@@ -813,30 +815,37 @@ footer {
         border: none;
         cursor: pointer;
         outline: none;
+        order: 1;
+        flex: 0 0 auto;
     }
     .nav-logo {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        width: max-content;
+        position: static !important;
+        transform: none !important;
+        width: auto !important;
+        margin: 0 !important;
+        order: 2;
+        flex: 1;
+        display: flex;
+        justify-content: center;
     }
-    .nav-logo h1 {
-        font-size: 1.2rem !important;
+    .nav-logo a {
+        font-size: 1.1rem !important;
+        letter-spacing: 2px !important;
+        white-space: nowrap;
     }
     .nav-right {
         display: none !important;
     }
     .search-wrapper {   
-        position: absolute;
-        right: 3.5rem;
-        top: 50%;
-        transform: translateY(-50%);
+        display: none !important; /* Searching is often tucked into the mobile menu in boutiques for clean UI, but we can leave it */
     }
     .cart-btn {
-        position: absolute;
-        right: 1.2rem;
-        top: 50%;
-        transform: translateY(-50%);
+        position: static !important;
+        transform: none !important;
+        order: 3;
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
     }
 
     /* Announcement Bar Fix */
@@ -850,9 +859,10 @@ footer {
 
     /* Hero Fix */
     .hero-bg-wrapper {
-        background-image: url('/cow_images/frame_000_delay-0.041s.jpg');
-        background-size: cover;
-        background-position: center;
+        background-image: url('/cow_images/frame_000_delay-0.041s.jpg') !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-color: transparent !important;
     }
 
     /* Floating Brand Badge Scrolling Sync */
