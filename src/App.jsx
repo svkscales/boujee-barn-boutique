@@ -29,14 +29,26 @@ const Home = () => (
 
 function App() {
   const [currentRoute, setCurrentRoute] = useState(window.location.hash || '#');
+  const [isScrolledPastHero, setIsScrolledPastHero] = useState(false);
 
   useEffect(() => {
     const handleHashChange = () => {
       setCurrentRoute(window.location.hash);
       window.scrollTo(0, 0); // Ensure the new page loads at the top
     };
+    };
     window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    
+    const handleScroll = () => {
+      // Toggle badge visibility after scrolling roughly past the hero screen
+      setIsScrolledPastHero(window.scrollY > (window.innerHeight * 0.8));
+    };
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   const renderContent = () => {
@@ -145,7 +157,7 @@ function App() {
       <Footer />
       
       {/* Floating Brand Seal */}
-      <div className="floating-brand-badge" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+      <div className={`floating-brand-badge ${isScrolledPastHero ? 'visible' : ''}`} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
         <img src="/logo.png" alt="Boujee Barn Certified Seal" />
       </div>
       

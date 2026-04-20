@@ -52,19 +52,32 @@ const VibeSection = () => {
           <div className="vibe-content">
             <h2>Effortless <em>Feminine</em> Charm</h2>
             
-            <p style={{ position: 'relative' }}>
-              <span style={{ color: 'transparent', userSelect: 'none' }}>{p1Full}</span>
-              <span style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 1, pointerEvents: 'none' }}>
-                {p1Full.slice(0, p1Len)}
-              </span>
-            </p>
-            
-            <p style={{ position: 'relative', marginTop: '1rem' }}>
-              <span style={{ color: 'transparent', userSelect: 'none' }}>{p2Full}</span>
-              <span style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 1, pointerEvents: 'none' }}>
-                {p2Full.slice(0, p2Len)}
-              </span>
-            </p>
+            <div className="vibe-text-container">
+              {/* Desktop Typewriter (Hidden on Mobile) */}
+              <p className="desktop-typing" style={{ position: 'relative' }}>
+                <span style={{ color: 'transparent', userSelect: 'none' }}>{p1Full}</span>
+                <span style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 1, pointerEvents: 'none' }}>
+                  {p1Full.slice(0, p1Len)}
+                </span>
+              </p>
+              
+              <p className="desktop-typing" style={{ position: 'relative', marginTop: '1rem' }}>
+                <span style={{ color: 'transparent', userSelect: 'none' }}>{p2Full}</span>
+                <span style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 1, pointerEvents: 'none' }}>
+                  {p2Full.slice(0, p2Len)}
+                </span>
+              </p>
+
+              {/* Mobile Static Fade (Hidden on Desktop) */}
+              <p className="mobile-static">
+                <span style={{ display: 'block', animation: 'fadeInUp 1s ease 0s forwards', opacity: 0 }}>Born in Jacksonville, Illinois, The Boujee Barn is more than a boutique;</span>
+                <span style={{ display: 'block', animation: 'fadeInUp 1s ease 0.3s forwards', opacity: 0 }}>it is a celebration of the fierce independent spirit wrapped in modern bohemian luxury.</span>
+              </p>
+              <p className="mobile-static" style={{ marginTop: '1rem' }}>
+                <span style={{ display: 'block', animation: 'fadeInUp 1s ease 0.6s forwards', opacity: 0 }}>We source high-quality, free-spirited pieces designed to make you feel bold, beautiful,</span>
+                <span style={{ display: 'block', animation: 'fadeInUp 1s ease 0.9s forwards', opacity: 0 }}>and unapologetically boujee wherever you go.</span>
+              </p>
+            </div>
             
             <div style={{ marginTop: '2rem' }}>
               <a href="#about" className="btn btn-outline">Read Our Story</a>
