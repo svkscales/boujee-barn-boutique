@@ -759,6 +759,14 @@ footer {
     display: none;
 }
 
+/* Product Details Desktop Layout */
+.product-detail-layout {
+    display: grid; 
+    grid-template-columns: 1.2fr 1fr; 
+    gap: 5rem; 
+    align-items: start;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     .hero-title { font-size: 4rem; }
@@ -899,6 +907,27 @@ footer {
     }
     .mobile-menu-links a:last-child {
         border-bottom: none;
+    }
+
+    /* Product Page Specific Layout */
+    .product-detail-layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+    
+    /* About Page Mobile Polish */
+    .about-hero h2 {
+        font-size: 2rem !important; /* Smaller text next to the image */
+    }
+    .line-header {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+    }
+    .line-header h2 {
+        font-size: 2rem !important;
+        white-space: nowrap; /* Forces one line for Meet the Girls / Inside the Barn */
     }
 
     /* Grids & Mobile Structural Overrides */

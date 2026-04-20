@@ -55,7 +55,7 @@ const ProductPage = ({ handle }) => {
   return (
     <section className="product-detail-section sand-bg" style={{ minHeight: '80vh', padding: '6rem 0' }}>
       <div className="container">
-        <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '5rem', alignItems: 'start' }}>
+        <div className="product-detail-layout">
           
           <div className="product-images" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             {primaryImage ? (

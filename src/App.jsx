@@ -137,13 +137,13 @@ function App() {
       return <ProductGrid type="collection" value={collHandle} productType={pType} title={title} />;
     }
 
-    const ignoreList = ['', '#', '#navbar', '#hero'];
-    if (!ignoreList.includes(currentRoute)) {
-      // Fallback
-      return <ProductGrid type="collection" value={currentRoute.replace('#', '')} />;
+    const ignoreList = ['', '#', '#navbar', '#hero', '#contact', '#about', '#returns', '#shipping', '#terms'];
+    if (ignoreList.includes(currentRoute)) {
+      return <Home />;
     }
 
-    return <Home />;
+    // Fallback if not an ignore path and not a known product path
+    return <ProductGrid type="collection" value={currentRoute.replace('#', '')} />;
   };
 
   return (
