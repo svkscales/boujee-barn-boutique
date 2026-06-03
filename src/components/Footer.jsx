@@ -147,6 +147,9 @@ const Footer = () => {
         <div className="footer-bottom">
           <div className="container" style={{ textAlign: 'center' }}>
             <p>&copy; 2026 Boujee Barn Boutique. All Rights Reserved. Located in Jacksonville, IL.</p>
+            <p style={{ marginTop: '0.5rem', fontSize: '0.85rem' }}>
+              Website built by <a href="https://svkscales.com" target="_blank" rel="noopener noreferrer" style={{ color: '#888888', textDecoration: 'none', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color = '#ffffff'} onMouseLeave={(e) => e.target.style.color = '#888888'}>SVK Scales</a>
+            </p>
           </div>
         </div>
       </footer>
