@@ -1307,3 +1307,31 @@ footer {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
+
+/* Custom Pointer Styles from Merle */
+@media (hover: hover) and (pointer: fine) {
+  .custom-pointer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 999999;
+    will-change: transform;
+  }
+
+  .custom-pointer.pointer-hover .pointer-svg {
+    transform: scale(0.85);
+  }
+
+  .pointer-svg {
+    transform-origin: top left;
+    transition: transform 0.15s ease-out;
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2));
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .custom-pointer {
+    display: none !important;
+  }
+}
