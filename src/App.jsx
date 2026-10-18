@@ -93,6 +93,7 @@ function App() {
       '#sweatpants': { type: 'Bottoms', collection: 'sweatpants' },
       '#skirts': { type: 'Bottoms', collection: 'skirts' },
       '#shorts': { type: 'Bottoms', collection: 'shorts' },
+      '#pajamas': { type: 'Bottoms', collection: 'pajamas' },
 
       '#mini': { type: 'Dresses', collection: 'mini' },
       '#midi': { type: 'Dresses', collection: 'midi' },

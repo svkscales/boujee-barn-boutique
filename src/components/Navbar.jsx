@@ -93,6 +93,7 @@ const Navbar = () => {
                   <a href="#sweatpants">Sweatpants</a>
                   <a href="#skirts">Skirts</a>
                   <a href="#shorts">Shorts</a>
+                  <a href="#pajamas">Pajamas</a>
                 </div>
               </div>
             </div>

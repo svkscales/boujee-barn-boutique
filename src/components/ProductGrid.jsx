@@ -50,7 +50,7 @@ const ProductGrid = ({ type, value, title, productType }) => {
     if (t.includes('new arrival')) return "The absolute freshest styles just hitting the boutique.";
     if (t.includes('sale')) return "Unmissable boutique steals and last-chance deals.";
     
-    if (t.includes('jean') || t.includes('pant') || t.includes('bottom') || t.includes('short') || t.includes('skirt') || t.includes('overall') || t.includes('sweat')) {
+    if (t.includes('jean') || t.includes('pant') || t.includes('bottom') || t.includes('short') || t.includes('skirt') || t.includes('overall') || t.includes('sweat') || t.includes('pajama')) {
       return "Essential foundations for your everyday western wardrobe.";
     }
     if (t.includes('top') || t.includes('shirt') || t.includes('tee') || t.includes('tank') || t.includes('jacket') || t.includes('sleeve') || t.includes('set')) {
