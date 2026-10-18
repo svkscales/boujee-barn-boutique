@@ -32,12 +32,12 @@ export function CartProvider({ children }) {
       updatedCart = await addToCart(cart.id, variantId);
     } else {
       updatedCart = await createCart(variantId);
-      if (updatedCart?.id) {
-        localStorage.setItem('boujee_cart_id', updatedCart.id);
-      }
     }
     
     if (updatedCart) {
+      if (updatedCart.id) {
+        localStorage.setItem('boujee_cart_id', updatedCart.id);
+      }
       setCart(updatedCart);
     }
     setIsLoading(false);

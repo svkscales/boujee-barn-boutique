@@ -18,7 +18,8 @@ const ProductPage = ({ handle }) => {
       if (isMounted) {
         setProduct(data);
         if (data?.variants?.edges?.length > 0) {
-          setSelectedVariant(data.variants.edges[0].node);
+          const firstAvailable = data.variants.edges.find(v => v.node.availableForSale)?.node || data.variants.edges[0].node;
+          setSelectedVariant(firstAvailable);
         }
         setLoading(false);
       }
